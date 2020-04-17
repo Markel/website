@@ -1,0 +1,22 @@
+body {
+    font-family: "Comic Sans MS", sans-serif;
+}
+
+li, ul>p {
+    display: inline;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+    
+a:hover, a:active {
+    text-decoration: underline;
+}
+
+a {
+    color: #d53369;
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* I mean, it's not a standard but... https://caniuse.com/#feat=mdn-css_properties_-webkit-text-fill-color */
+}
