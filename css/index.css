@@ -1,22 +1,169 @@
+/* Honestly, not going to bother too much right now about google privacy policies */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+html {
+    width: 100%;
+    height: 100%;
+    background: #f8fafc;
+    display: flex;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 800px) {
+    html {
+        font-size: 12px;
+    }
+}
+
 body {
-    font-family: "Comic Sans MS", sans-serif;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100% min-content;
+    gap: 0px 0px;
+    grid-template-areas:
+        "Main"
+        "Footer";
 }
 
-li, ul>p {
-    display: inline;
+main {
+    grid-area: Main;
+    padding: 0px 10% 0px 15%;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "Title Photo";
 }
 
-a:link, a:visited {
+section {
+    grid-area: Title;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+h1, h2 {
+    margin: 0.5rem 0rem 0.5rem 0rem;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+section>p {
+    margin: .5rem 0rem 1rem 0rem;
+}
+
+.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
     text-decoration: none;
+    border: none;
+    border-radius: .5rem;
+    transition: all 300ms ease-in-out;
 }
-    
-a:hover, a:active {
+
+.button:focus {
     text-decoration: underline;
 }
 
-a {
-    color: #d53369;
-    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent; /* I mean, it's not a standard but... https://caniuse.com/#feat=mdn-css_properties_-webkit-text-fill-color */
+.contact_button {
+    padding: 1rem 3rem 1rem 3rem;
+    margin: 1rem 0rem 1rem 0rem;
+    background-color: #3897d3;
+    color: #f8fafc;
+}
+
+.contact_button:hover, .contact_button:focus {
+    background-color: #2a81be;
+}
+
+.links {
+    display: inline;
+    margin-top: 1rem;
+}
+
+.SM_button {
+    padding: 0.75rem 2rem 0.75rem 2rem;
+    margin: 0.75rem 1rem 0.75rem 0rem;
+    color: #f8fafc;
+}
+
+.github {
+    background-color: #24292D;
+}
+
+.github:hover, .github:focus {
+    background-color: #15181a;
+}
+
+.twitter {
+    background-color: #08a0e9;
+}
+
+.twitter:hover, .twitter:focus {
+    background-color: #058bc9;
+}
+
+aside {
+    grid-area: Photo;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile_picture_div {
+    width: 75%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+}
+
+.profile_picture, img {
+    width: 100%;
+    border-radius: 10%;
+}
+
+footer {
+    grid-area: Footer;
+    background-color: #111111;
+    color: #f8fafc;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 500px) {
+    html {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 7.5% 10% 0px 10%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content;
+        gap: 5% 0px;
+        grid-template-areas:
+            "Photo"
+            "Title";
+    }
+
+    section {
+        align-items: center;
+    }
 }

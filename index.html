@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <html>
-
+<!-- Hiya! Thank you for reading this. I know the website is simple, but if I'm
+    honest this is just a "fancy" landing page for what it previously was a text
+    based Comic Sans link page. Someday I will update this website to have a
+    blog, somewhere to show my projects, etc., but not gonna be today. -->
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Markel was here</title>
+    <meta name="HandheldFriendly" content="true"/>
+    <meta charset="utf-8">
+    <title>Markel Ferro</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <h1>Markel Ferro</h1>
-    <p>Hi, this is the website of Markel Ferro, a basic text website! (Saving the bits!)</p>
-    <p>Here you'll find links to all sorts of things that I've created (I count tweets as my creation)</p>
-    <h2>Projects</h2>
-    <ul>
-        <li><a href="https://github.com/MarkelFe/metacritic-crawler">Metacritic Crawler</a></li><p>: It scans metacritics game pages as saves them in a database</p></br>
-        <li><a href="https://twitter.com/ProposicionBot">Proposiciones Bot</a></li><p>: A twitter bot that demonstrates its love</p></br>
-        <li><a href="https://frc7787.ca/">FRC 7787 website</a></li><p>: A <b>not finished</b> project, but its very colorful</p></br>
-        <li><a href="https://github.com/MarkelFe/website">This website!</a></li><p>: Not very impressive, but not meant to be</p></br>
-    </ul>
-    <h2>S@cial media</h2>
-    <ul>
-        <li><a href="https://github.com/MarkelFe">Github @MarkelFe</a></li></br>
-        <li><a href="https://twitter.com/MarkelFe">Twitter @MarkelFe</a></li></br>
-        <li><a id="email-a" href="">May take some time to appear (avoiding bots)</a></li></br>
-    </ul>
+    <main>
+        <section id="presentation">
+            <h1>Hiya!</h1>
+            <h2>I'm Markel, an Artificial Inteligence Student in the Basque Country, Spain</h2>
+            <a class="button contact_button" href="mailto:contact@markel.dev">Contact Me!</a>
+            <p>You may also find me on:</p>
+            <div class="links">
+                <a class="button SM_button github" href="https://github.com/Markel">GitHub</a>
+                <a class="button SM_button twitter" href="https://twitter.com/MarkelFe">Twitter</a>
+            </div>
+        </section>
+        <aside id="photo">
+            <div class="profile_picture_div"> <!-- The picture element isn't very nice with CSS -->
+                <picture class="profile_picture">
+                    <source srcset="src/profile.avif" sizes="" type="image/avif">
+                    <source srcset="src/profile.webp" type="image/webp">  
+                    <img src="src/profile.jpg" alt="Markel's profile picture">
+                </picture>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <p>©&nbsp;</p>
+        <p id="year"></p> 
+        <p>&nbsp;Markel Studios</p>
+        <script>
+            var d = new Date();
+            var n = d.getFullYear();
+            document.getElementById("year").textContent = n;
+        </script>
+    </footer>
 </body>
 
 </html>
