@@ -124,12 +124,12 @@ section>p {
     background-color: #15181a;
 }
 
-.twitter {
-    background-color: #08a0e9;
+.linkedin {
+    background-color: #0a66c2;
 }
 
-.twitter:hover, .twitter:focus {
-    background-color: #058bc9;
+.linkedin:hover, .linkedin:focus {
+    background-color: #044b93;
 }
 
 aside {
